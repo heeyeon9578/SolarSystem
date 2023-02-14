@@ -94,8 +94,8 @@ GameObject:
   - component: {fileID: 4910669812078012707}
   - component: {fileID: 5111126579673811525}
   - component: {fileID: 3260104607745564239}
-  - component: {fileID: 4915303155560408205}
-  - component: {fileID: 4915303155560408210}
+  - component: {fileID: 7568472841602126585}
+  - component: {fileID: 925744475}
   m_Layer: 0
   m_Name: Saturn
   m_TagString: TrackingObject
@@ -110,8 +110,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4914076595465992523}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 38.23}
+  m_LocalRotation: {x: 0.0011050903, y: -0.999838, z: -0.0058401795, w: 0.016991494}
+  m_LocalPosition: {x: 6.2571363, y: 0.6427289, z: 37.99721}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -121,7 +121,7 @@ Transform:
   - {fileID: 4916074262733327759}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.667, y: -178.052, z: -0.138}
 --- !u!205 &5111126579673811525
 LODGroup:
   m_ObjectHideFlags: 0
@@ -162,7 +162,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4915303155560408205
+--- !u!114 &7568472841602126585
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,12 +171,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 4914076595465992523}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31d365cbd3eab544a870178ee0bf10d4, type: 3}
+  m_Script: {fileID: 11500000, guid: af7f027210cca9f4ca964d616e271f92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 4910669812078012707}
-  speed: 30
---- !u!114 &4915303155560408210
+  sunPrefab: {fileID: 489638852738238226, guid: ef39a112c40177e408508f3007c8f191, type: 3}
+  planetPrefab: {fileID: 4914076595465992523}
+  rotateSunSpeed: 7
+  rotateThisSpeed: 12
+  planetSize: 3
+  zPosition: 50
+--- !u!114 &925744475
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,11 +189,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 4914076595465992523}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31d365cbd3eab544a870178ee0bf10d4, type: 3}
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 9
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 7568472841602126585}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &4914381211845872433
 GameObject:
   m_ObjectHideFlags: 0

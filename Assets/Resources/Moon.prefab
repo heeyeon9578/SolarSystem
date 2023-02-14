@@ -5001,8 +5001,8 @@ GameObject:
   - component: {fileID: 7750233752801632053}
   - component: {fileID: 7585885432141536469}
   - component: {fileID: 3725642429493766744}
-  - component: {fileID: 7754899766293595001}
-  - component: {fileID: 7754899766293595000}
+  - component: {fileID: 6353123650551628185}
+  - component: {fileID: 389361946}
   m_Layer: 0
   m_Name: Moon
   m_TagString: Untagged
@@ -5017,9 +5017,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7754056547813016849}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.00046989322, z: 20.15393}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalRotation: {x: 0.026098134, y: -0.53921694, z: 0.17227358, w: 0.8239453}
+  m_LocalPosition: {x: 10.595336, y: 1.1302941, z: 27.292252}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7750178329281012989}
@@ -5027,7 +5027,7 @@ Transform:
   - {fileID: 7750795447167617803}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 13.226, y: -64.628, z: 15.231}
 --- !u!205 &7585885432141536469
 LODGroup:
   m_ObjectHideFlags: 0
@@ -5067,7 +5067,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7754899766293595001
+--- !u!114 &6353123650551628185
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5076,12 +5076,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 7754056547813016849}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31d365cbd3eab544a870178ee0bf10d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b68574854f437244a60ee632bf07c3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 7750233752801632053}
-  speed: 30
---- !u!114 &7754899766293595000
+  sunPrefab: {fileID: 0}
+  planetPrefab: {fileID: 7754056547813016849}
+  rotateSunSpeed: 100
+  rotateThisSpeed: 12
+  planetSize: 0.1
+  zPosition: 25
+--- !u!114 &389361946
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5090,8 +5094,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 7754056547813016849}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31d365cbd3eab544a870178ee0bf10d4, type: 3}
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 1
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 6353123650551628185}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
